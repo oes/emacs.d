@@ -15,13 +15,13 @@
     (goto-char (point-max))
     (eval-print-last-sexp)))
 
-(defvar pkgs '(slime
+(defvar pkgs '(slime 	; needs texinfo for install
 	       paredit
 	       multi-term
 	       clojure-mode
 	       nrepl
 	       screenwriter
-	       emacs-w3m
+	       emacs-w3m ; needs csv for checkout
 	       haskell-mode
 	       color-theme))
 
