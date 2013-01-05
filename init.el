@@ -23,7 +23,8 @@
 	       screenwriter
 	       emacs-w3m ; needs csv for checkout
 	       haskell-mode
-	       color-theme))
+	       color-theme
+	       go-mode))
 
 (el-get 'sync pkgs)
 
