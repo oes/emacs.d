@@ -4,6 +4,9 @@
 (setq x-select-enable-clipboard t)
 (tool-bar-mode 0)
 
+(add-hook 'before-save-hook
+	  'delete-trailing-whitespace)
+
 ;; setup el-get
 (setq el-get-user-package-directory "~/.emacs.d/elinit/")
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
@@ -24,7 +27,8 @@
 	       emacs-w3m ; needs csv for checkout
 	       haskell-mode
 	       color-theme
-	       go-mode))
+	       go-mode
+	       php-mode))
 
 (el-get 'sync pkgs)
 
