@@ -5,7 +5,7 @@
 (tool-bar-mode 0)
 
 (add-hook 'before-save-hook
-	  'delete-trailing-whitespace)
+          'delete-trailing-whitespace)
 
 (setq-default indent-tabs-mode nil)
 
@@ -15,10 +15,10 @@
 (setq linum-mode-inhibit-modes-list
       '(eshell-mode
         inferior-emacs-lisp-mode
-	shell-mode
+        shell-mode
         term-mode
         fundamental-mode
-	erc-mode))
+        erc-mode))
 
 (defadvice linum-on (around linum-on-inhibit-for-modes)
   (unless (member major-mode linum-mode-inhibit-modes-list)
@@ -37,17 +37,17 @@
     (goto-char (point-max))
     (eval-print-last-sexp)))
 
-(defvar pkgs '(slime 	; needs texinfo for install
-	       paredit
-	       multi-term
-	       clojure-mode
-	       nrepl
-	       screenwriter
-	       emacs-w3m ; needs csv for checkout
-	       haskell-mode
-	       color-theme
-	       go-mode
-	       php-mode))
+(defvar pkgs '(slime    ; needs texinfo for install
+               paredit
+               multi-term
+               clojure-mode
+               nrepl
+               screenwriter
+               emacs-w3m ; needs csv for checkout
+               haskell-mode
+               color-theme
+               go-mode
+               php-mode))
 
 (el-get 'sync pkgs)
 
