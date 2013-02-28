@@ -9,6 +9,23 @@
 
 (setq-default indent-tabs-mode nil)
 
+;; setup linum-mode
+(setq linum-format "%d ")
+(global-linum-mode 1)
+(setq linum-mode-inhibit-modes-list
+      '(eshell-mode
+        inferior-emacs-lisp-mode
+	shell-mode
+        term-mode
+        fundamental-mode
+	erc-mode))
+
+(defadvice linum-on (around linum-on-inhibit-for-modes)
+  (unless (member major-mode linum-mode-inhibit-modes-list)
+    ad-do-it))
+
+(ad-activate 'linum-on)
+
 ;; setup el-get
 (setq el-get-user-package-directory "~/.emacs.d/elinit/")
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
