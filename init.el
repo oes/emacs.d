@@ -7,6 +7,8 @@
 (add-hook 'before-save-hook
 	  'delete-trailing-whitespace)
 
+(setq-default indent-tabs-mode nil)
+
 ;; setup el-get
 (setq el-get-user-package-directory "~/.emacs.d/elinit/")
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
