@@ -41,9 +41,10 @@
                paredit
                multi-term
                clojure-mode
-               nrepl
+               cider
+               rainbow-delimiters
+               auto-complete
                screenwriter
-               emacs-w3m ; needs csv for checkout
                haskell-mode
                color-theme
                go-mode
@@ -53,4 +54,3 @@
 
 ;; use chicken as default scheme program
 (setq scheme-program-name "csi -:c")
-
